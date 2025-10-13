@@ -1,0 +1,114 @@
+.brands-section {
+    background: url('./assets/brand-bg.jpg');
+}
+.brand-logos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.brand-logos img {
+    max-width: clamp(20vw, 40vw, 50vw);
+}
+
+.contact-section {
+    position: relative;
+    padding: 75px 0 10px 0;
+    background: rgba(34, 34, 34, 0.707) ;
+    height: clamp(100%, 100vh, 800px);
+    text-align: center;
+}
+
+.contact-content {
+    position: relative;
+    z-index: 2;
+}
+
+.info-box {
+    background-color: rgba(70, 70, 70, 0.9);
+    padding: 30px;
+    border-radius: 8px;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.contact-timing {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.contact-info,
+.timing {
+    flex: 1;
+}
+
+.timing p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+.timing span {
+    font-weight: 600;
+}
+
+.contact-form-container h4 {
+    color: #fff;
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    font-size: .9em;
+    box-sizing: border-box;
+}
+.contact-form textarea{
+    font-size: 1.1em;
+}
+
+.contact-form input:nth-child(odd),
+.contact-form input:nth-child(even) {
+    width: 48%;
+}
+
+.contact-form textarea {
+    width: 100%;
+    resize: none;
+}
+
+.contact-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: auto;
+    transition: background-color 0.3s;
+}
+@media (max-width: 600px) {
+    .contact-form input:nth-child(odd),
+    .contact-form input:nth-child(even) {
+        width: 100%;
+    }
+}

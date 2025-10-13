@@ -1,0 +1,249 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.container {
+    margin: 0% 10%;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+h2 {
+    text-align: center;
+    font-weight: 600;
+    font-size: clamp(1em,5vw,1.8em);
+    margin-bottom: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+a {
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s;
+}
+
+a:hover {
+    background-color: white;
+    color: #000000;
+}
+
+.floating-contact {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+}
+
+.contact-icon {
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #000000;
+    color: white;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+.contact-icon:hover{
+    background-color: white;
+}
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    height: clamp(30px, 50px, 55px);
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(34, 34, 34, 0.95);
+    color: white;
+    font-size: clamp(12px,3vw,24px);
+    height: clamp(30px, 8vw, 80px);
+}
+
+.logo {
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav {
+    margin-right: 5%;
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.logo img {
+    max-width: clamp(40px, 5vw, 60px);
+    background-color: rgba(34, 34, 34, 0.95);
+    border-radius: 5px;
+}
+
+.logo:hover,
+nav a:hover {
+    background-color: white;
+    border-radius: clamp(2px, 5vw, 10px);
+    transform: scale(1.1);
+    color: rgba(34, 34, 34, 0.95);
+    transition: all 0.3s ease-in-out;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.side-nav-links,
+.close-btn,
+.menu-toggle {
+    display: none;
+}
+
+.hero-section {
+    position: relative;
+    padding: 150px 0 100px 0;
+    background: url(./assets/Hero-image.jpg) no-repeat center center / cover;
+    width: clamp(80vw, 99vw, 99vw);
+    min-height:400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: clamp(.5em, 4vw, 2.5em);
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: clamp(.5em, 3vw, 1.2em);
+    color: #f7f7f7;
+}
+
+.hero-logo img {
+    width: clamp(30px, 2vw, 100px);
+    height: clamp(30px, 2vw, 100px);
+    margin-top: 20px;
+}
+
+.btn-enquiry {
+    display: inline-block;
+    font-size: clamp(4px,16px,24px);
+    background-color: #000000;
+    color: white;
+    padding: 12px 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+@media (max-width: 900px) {
+    .side-nav-links {
+        position: relative;
+        width: 30vw;
+        height: 100vh;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(34, 34, 34, 0.95);
+        gap: 10px;
+        position: absolute;
+        top: 0px;
+        margin-top: 0%;
+        right: 0px;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    .nav-links,.side-nav-links{
+        display: none;
+    }
+
+    .menu-toggle {
+        margin-right: 5%;
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1em;
+        cursor: pointer;
+    }
+
+    .close-btn {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1em;
+        cursor: pointer;
+    }
+    .hero-section{
+        padding: 50px 0px 30px 0px;
+        min-height: 200px;
+    }
+    .hero-content{
+        max-width: 400px;
+    }
+    .btn-enquiry{
+        font-size: 12px;
+        padding: 6px 15px;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .hero-content{
+        max-width: 200px;
+    }
+}
+@media (max-width: 600px) {
+
+    .navbar .logo {
+        margin-left: 20px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+}

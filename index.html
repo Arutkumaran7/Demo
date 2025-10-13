@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M&L Repair - Expert Mobile & Laptop Service</title>
+    <link rel="icon" type="image/png" href="./assets/logo.png">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="service.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="footer.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "jSiPMkgOXjmUP9k4_",
+            });
+        })();
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="floating-contact">
+        <a href="#" class="contact-icon"><i class="fas fa-envelope"></i></a>
+        <a href="#" class="contact-icon"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" class="contact-icon"><i class="fa-solid fa-phone"></i></a>
+    </div>
+   <header class="navbar" s>
+        <div class="logo">
+            <img src="./assets/logo.png" alt="" class="logo-image">
+            M&L Repair
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT </a></li>
+                <li><a href="#services">SERVICES</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+            <ul class="side-nav-links">
+                <button class="close-btn" onclick="closeMenu()">✖</button>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#services">SERVICES</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </header>
+    <section class="hero-section " id="home">
+        <div class="hero-container">
+            <div class="hero-content ">
+                <h1>Expert Diagnostics, Honest Repair, Zero Guesswork</h1>
+                <p>Broken Screens | Dead Batteries | Revived by Experts</p>
+                <a href="#contact-form" class="btn-enquiry">Enquiry</a>
+            </div>
+    </section>
+    <section class="about-us" id="about">
+        <h2>ABOUT US</h2>
+        <div class="about-content container">
+            <div class="about-text">
+                <p>
+                    Your One-Stop Shop for All Phone and Laptop Repair Needs.
+                </p>
+                <p>
+                    At M&L Repair, we know how vital your phone and laptop is. From cracked screens to battery or
+                    software issues,
+                    we handle every repair with precision. We offer same-day service, genuine parts, and expert
+                    service at
+                    the best prices. Backed by a repair service warranty, we ensure quick, reliable service that you
+                    can trust—where
+                    speed meets quality.
+                </p>
+            </div>
+            <div class="about-image">
+                <img src="./assets/About2.png" alt="Computer and Mobile Service Parts">
+            </div>
+        </div>
+    </section>
+    <section class="service-section" id="services">
+        <div class="container">
+            <div class="full-service-section" >
+                <h2>Expert Service & Quality Assurance</h2>
+                <p class="assurance-text">
+                    <span style="color: #000000; font-weight: bolder;">Your Tech Broken? We Fix It All.</span>
+                    <br>
+                    From a cracked screen or failing battery to complex water damage and frustrating charging port
+                    failures—we provide fast, expert repair for all mobile and laptop issues, including internal
+                    component
+                    fixes
+                    for heating, camera, Wi-Fi, and Bluetooth problems.
+                </p>
+            </div>
+            <div class="service-grid">
+                <div class="service-item ">
+                    <img src="./assets/android.png" alt="Android Icon">
+                    <p>SMARTPHONE SERVICES</p>
+                </div>
+                <div class="service-item">
+                    <img src="./assets/laptop.png" alt="Laptop Icon">
+                    <p>LAPTOP SERVICES</p>
+                </div>
+                <div class="service-item">
+                    <img src="./assets/Apple_logo.png   " alt="Apple Icon">
+                    <p>IPHONE SERVICES</p>
+                </div>
+                <div class="service-item">
+                    <img src="./assets/speaker.png" alt="Speaker Icon">
+                    <p>SPEAKER SERVICES</p>
+                </div>
+                <div class="service-item">
+                    <img src="./assets/tablet.png" alt="Tablet Icon">
+                    <p>TABLET SERVICES</p>
+                </div>
+                <div class="service-item">
+                    <img src="./assets/ipad.png" alt="iPad Icon">
+                    <p>IPAD SERVICES</p>
+                </div>
+            </div>
+            <div class="how-it-works">
+                <h2>HOW IT WORK?</h2>
+                <img src="./assets/how-work.png" alt="">
+                <a href="#contanct-form" class="btn-book">BOOK AN APPOINTMENT</a>
+            </div>
+
+            <div class="stats-section">
+                <div class="stat-box">
+                    <p class="stat-number">10+</p>
+                    <p class="stat-label">Years of Experience</p>
+                </div>
+                <div class="stat-box">
+                    <p class="stat-number">4.8+</p>
+                    <p class="stat-label">Rating</p>
+                </div>
+                <div class="stat-box">
+                    <p class="stat-number">7K+</p>
+                    <p class="stat-label">Customers</p>
+                </div>
+                <div class="stat-box">
+                    <p class="stat-number">98%</p>
+                    <p class="stat-label">Satisfied Customer</p>
+                </div>
+            </div>
+            <div class="why-choose-us">
+                <h2>WHY CHOOSE M&L REPAIR</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="card-image-container">
+                            <img src="./assets/why1.jpg" alt="Quality Parts" >
+                        </div>
+                        <h3>Quality Parts</h3>
+                        <p>We only use the very best parts for all of our phone repairs.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="card-image-container">
+                            <img src="./assets/why2.jpg" alt="Express Repairs">
+                        </div>
+                        <h3>Express Repairs</h3>
+                        <p>Our fastest in-store repairs can be completed in one day.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="card-image-container">
+                            <img src="./assets/why3.jpg" alt="Repair Experts">
+                        </div>
+                        <h3>Repair Experts</h3>
+                        <p>With years of experience, our trusted technicians offer total peace of mind.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="brands-section">
+            <h2 style="margin-top: 0px; color: #000000;">BRANDS WE REPAIR</h2>
+            <div class="brand-logos">
+                <img src="./assets/compLogo.png" alt="" style="width: clamp(250px,500px,550px);">
+                <img src="./assets/lapcomLog.png" alt="" style="width: clamp(250px,500px,550px);">
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="container contact-content">
+            <div class="info-box">
+                <div class="address">
+                    <h3>ADDRESS</h3>
+                    <p>Shop No.33, Basement Floor, Raahat Plaza Arcot Rd, Vadapalani, Chennai, Tamil Nadu 600026</p>
+                </div>
+                <div class="contact-timing">
+                    <div class="contact-info">
+                        <h3>CONTACT INFO</h3>
+                        <p>Phone No. - +91 7699038800</p>
+                        <p>E-mail: mlrepair@gmail.com</p>
+                    </div>
+                    <div class="timing">
+                        <h3>OPEN TIMING</h3>
+                        <p>MONDAY TO SATURDAY: <span>10AM TO 10PM</span></p>
+                        <p>SUNDAY: <span>10AM TO 2PM</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form-container" id="contact-form">
+                <h4>SUBMIT YOUR MOBILE or LAPTOP ISSUES?</h4>
+                <form id="contact-form" class="contact-form">
+                    <input id="name" type="text" name="name" placeholder="NAME" required>
+                    <input id="email" type="email" name="email" placeholder="E-MAIL" required>
+                    <input id="phoneno" type="tel" name="phone" placeholder="PHONE NUMBER" pattern="[0-9]{10}" required>
+                    <input id="subject" type="text" name="subject" placeholder="SUBJECT" required>
+                    <textarea id="problem" name="problem" placeholder="TYPE YOUR PROBLEM" rows="4" required></textarea></label>
+                    <button type="submit" onclick="sendMail()">SUBMIT</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer class="footer-section">
+        <div class="social-copyright">
+            <div class="social-icons">
+                <a href="#"><i class="fa-solid fa-phone"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p class="copyright">COPYRIGHTS 2025 M&L Repair</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+.footer-section {
+    position: relative;
+    padding: 50px 0 10px 0;
+    background: black ;
+
+    text-align: center;
+}
+.social-icons a {
+    color: white;
+    font-size: 1.5em;
+    margin: 0 10px;
+    opacity: 0.8;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+    opacity: 1;
+}
+
+.copyright {
+    margin-top: 15px;
+    font-size: 0.8em;
+    color: #bbb;
+}
+@media (max-width: 992px) {
+    .service-grid-inner {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .contact-timing {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
