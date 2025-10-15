@@ -1,23 +1,92 @@
-  function sendMail() {
-      var params = {
-          name: document.getElementById("name").value,
-          email: document.getElementById("email").value,
-          phone:document.getElementById("phone").value,
-          subject:document.getElementById("subject").value,
-          problem:document.getElementById("problem").value     
-      }; 
-      console.log("Data being sent:", params);
-      emailjs.send("service_lsbgdsx", "template_9ez6i19", params)
-        .then(function(response) {
-          console.log('SUCCESS!', response.status, response.text);
-          alert('Email sent successfully!');
-        }, function(error) {
-          console.log('FAILED...', error);
-          alert('Failed to send email.');
-        });
+// --- Select elements once, right after the page loads ---
+let contactForm, submitButton, requiredFields;
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Now we assign the elements to our variables
+  contactForm = document.getElementById('contact-form');
+  submitButton = document.getElementById('submit-btn');
+  requiredFields = contactForm.querySelectorAll('input[required], textarea[required]');
+
+  // --- FORM VALIDATION LOGIC ---
+  function validateForm() {
+    let allFieldsFilled = true;
+    requiredFields.forEach(function(field) {
+      if (field.value.trim() === '') {
+        allFieldsFilled = false;
+      }
+    });
+    // Use the variable instead of searching the DOM again
+    submitButton.disabled = !allFieldsFilled;
+  }
+
+  requiredFields.forEach(function(field) {
+    field.addEventListener('input', validateForm);
+  });
+
+  // Initially disable the button
+  validateForm();
+});
+
+
+// --- EMAIL SENDING FUNCTION ---
+function sendMail() {
+  var params = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    mobile: document.getElementById("mobile").value,
+    subject: document.getElementById("subject").value,
+    problem: document.getElementById("problem").value
   };
+
+  const serviceID = "service_s2b2yag";
+  const templateID = "template_9ez6i19";
+
+  emailjs.send(serviceID, templateID, params)
+    .then(function(response) {
+      console.log('SUCCESS!', response.status, response.text);
+      alert('Email sent successfully!');
+      
+      // ✅ Now using the reliable variables
+      contactForm.reset(); 
+      submitButton.disabled = true;
+
+    })
+    .catch(function(error) {
+      console.log('FAILED...', error);
+      alert('Failed to send email. Check console for details.');
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Now we assign the elements to our variables
+  contactForm = document.getElementById('booking-form');
+  submitButton = document.getElementById('submit-btn2');
+  requiredFields = contactForm.querySelectorAll('input[required], textarea[required]');
+
+  // --- FORM VALIDATION LOGIC ---
+  function validateForm() {
+    let allFieldsFilled = true;
+    requiredFields.forEach(function(field) {
+      if (field.value.trim() === '') {
+        allFieldsFilled = false;
+      }
+    });
+    // Use the variable instead of searching the DOM again
+    submitButton.disabled = !allFieldsFilled;
+  }
+
+  requiredFields.forEach(function(field) {
+    field.addEventListener('input', validateForm);
+  });
+
+  // Initially disable the button
+  validateForm();
+});
+
+
+// --- EMAIL SENDING FUNCTION ---
 function sendMail2() {
-    const rawDateValue = document.getElementById("dot").value; 
+const rawDateValue = document.getElementById("dot").value; 
     if (!rawDateValue) {
         alert('Please select a date and time.');
         return; 
@@ -38,17 +107,26 @@ function sendMail2() {
         phone: document.getElementById("phone2").value,
         dob: readableDate, 
     }; 
-    console.log("Data being sent:", params2);
-    emailjs.send("service_lsbgdsx", "template_a4msl63", params2)
-        .then(function(response) {
-            console.log('SUCCESS!', response.status, response.text);
-            alert('Email sent successfully!');
-        }, function(error) {
-            console.log('FAILED...', error);
-            alert('Failed to send email.');
-        });
 
-};
+  const serviceID = "service_s2b2yag";
+  const templateID = "template_9ez6i19";
+
+  emailjs.send(serviceID, templateID, params2)
+    .then(function(response) {
+      console.log('SUCCESS!', response.status, response.text);
+      alert('Email sent successfully!');
+      
+      // ✅ Now using the reliable variables
+      contactForm.reset(); 
+      submitButton.disabled = true;
+
+    })
+    .catch(function(error) {
+      console.log('FAILED...', error);
+      alert('Failed to send email. Check console for details.');
+    });
+}
+
 
 function toggleMenu() {
     const navLinks = document.querySelector('.side-nav-links');
@@ -90,19 +168,3 @@ function down(){
             window.location.href ='#footer';
         });
 };
-
-/*document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('contact-form');
-    const submitButton = document.getElementById('submit-btn');
-    submitButton.disabled = true;
-function validateForm() {
-        if (form.checkValidity()) {
-            submitButton.disabled = false; 
-        } else {
-            submitButton.disabled = true; 
-        }
-    } 
-    form.addEventListener('input', validateForm);
-    form.addEventListener('change', validateForm);
-    validateForm(); 
-});*/

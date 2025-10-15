@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Quantico', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -140,7 +140,7 @@ nav a:hover {
 
 .hero-section {
     position: relative;
-    padding: 150px 0 100px 0;
+    padding: 250px 0 100px 0;
     background: url(./assets/Hero-image.jpg) no-repeat center center / cover;
     width: clamp(80vw, 99vw, 99vw);
     min-height: 400px;

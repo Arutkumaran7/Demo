@@ -125,6 +125,7 @@
 }
 
 .feature-card:hover {
+    margin: 5px;
     background-color: rgba(39, 39, 39, 0.882);
     border-radius: clamp(2px, 5vw, 10px);
     transform: scale(1.1);
@@ -174,6 +175,7 @@
 }
 
 .btn-book {
+    font-family: 'Quantico', sans-serif;
     position: relative;
     align-items: center;
     background-color: #ffffff;
@@ -213,7 +215,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 600px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 10px;
 }
@@ -236,6 +238,7 @@
 }
 
 .booking-form button {
+    font-family: 'Quantico', sans-serif;
     background-color: #0b0b0b;
     color: white;
     padding: 10px 30px;
@@ -247,25 +250,19 @@
     transition: background-color 0.3s;
 }
 
-.booking-form button:hover {
-    background-color: white;
-    color: #0b0b0b;
-}
+
 
 @media (max-width: 900px) {
     .service-section {
         padding: 50px 0px 30px;
-        background: url('./assets/Serive-bg-1.jpg') no-repeat center center / cover;
     }
 
     .how-section {
         padding: 50px 0px 30px;
-        background: url('./assets/Serive-bg-1.jpg') no-repeat center center / cover;
     }
 
     .why-section {
         padding: 50px 0px 30px;
-        background: url('./assets/Serive-bg-1.jpg') no-repeat center center / cover;
     }
     
 
