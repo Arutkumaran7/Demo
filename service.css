@@ -1,7 +1,18 @@
 .service-section {
-    padding: 75px 0 30px;
-    background: url('./assets/Serive-bg.jpg') no-repeat center center / cover;
+    padding: 130px 0 30px;
+    background: black;
 }
+
+.how-section {
+    padding: 100px 0 30px;
+    background: black;
+}
+
+.why-section {
+    padding: 100px 0 30px;
+    background: url('./assets/brand-bg.jpg') no-repeat center center / cover;
+}
+
 
 .full-service-section h2 {
     color: #fff;
@@ -10,8 +21,8 @@
 
 .assurance-text {
     max-width: 850px;
-    margin: 10px auto 40px auto;    
-    font-size: 1.1em;
+    margin: 10px auto 40px auto;
+    font-size: clamp(0.7em, 2vw, 1.1em);
 }
 
 
@@ -47,7 +58,7 @@
     font-weight: bold;
     transform: scale(1.1);
     transition: all 0.3s ease-in-out;
-    padding: clamp(1px, 2vw, 2px);
+    padding: clamp(5px, 2vw, 10px);
     cursor: pointer;
     font-weight: bolder;
 }
@@ -59,83 +70,13 @@
     color: #fff;
 }
 
-
-.how-it-works {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 50px;
-}
-
-.how-it-works img {
-    max-width: clamp(100%, 60vw, 100%);
-    min-height: 40px;
-    border-radius: 10px;
-}
-
-.how-it-works a {
-    background-color: #848585;
-    width: fit-content;
-}
-
-.how-it-works a:hover {
-    background-color: #000;
-    color: #ffffff;
-}
-
-
-
-.btn-book {
-    display: inline-block;
-    color: white;
-    padding: 10px 30px;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: clamp(8px, 2vw, 16px);
-    border-radius: 5px;
-    margin-top: 30px;
-    transition: background-color 0.3s;
-}
-
-.btn-book:hover {
-    background-color: #0056b3;
-}
-
-.stats-section {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.655);
-    padding: 20px 0;
-    border-radius: 5px;
-    margin-bottom: 50px;
-}
-
-.stat-box {
-    text-align: center;
-    color: #fff;
-}
-
-.stat-number {
-    font-size: clamp(1em,2vw,2em);
-    font-weight: 700;
-    margin: 0 0 5px 0;
-    color: #ffffff;
-}
-
-.stat-label {
-    font-size: clamp(.4em,2vw,.9em);
-    font-weight: 400;
-    margin: 0;
-    text-transform: uppercase;
-}
-
+/* why choose us Section*/
 
 .why-choose-us {
-    padding: 50px 0 80px 0;
+    padding: 10px 0 50px;
+}
+.why-choose-us h2{
+    color: #000;
 }
 
 .features-grid {
@@ -146,7 +87,7 @@
 }
 
 .feature-card {
-    background-color: #7e7e7e8f;
+    background-color: #adadad;
     padding: 20px;
     border-radius: 8px;
     text-align: center;
@@ -165,7 +106,7 @@
 
 .card-image-container img {
     width: 100%;
-    height: 100%;   
+    height: 100%;
     object-fit: fill;
     border-radius: 8px;
 }
@@ -182,19 +123,152 @@
     font-size: 1.1em;
     font-weight: 500;
 }
+
 .feature-card:hover {
-    background-color:   rgba(0, 0, 0, 0.501);
+    background-color: rgba(39, 39, 39, 0.882);
     border-radius: clamp(2px, 5vw, 10px);
     transform: scale(1.1);
     transition: all 0.3s ease-in-out;
-    padding: 5px 10px;                                                                          
+    padding: 5px 10px;
     cursor: pointer;
     font-weight: bolder;
 }
-@media (max-width: 900px) { 
-    .service-section{
+.stats-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    padding: 20px 0;
+    border-radius: 5px;
+    margin-bottom: 50px;
+}
+
+.stat-box {
+    text-align: center;
+    color: #fff;
+}
+
+.stat-number {
+    font-size: clamp(1em, 2vw, 2em);
+    font-weight: 700;
+    margin: 0 0 5px 0;
+    color: #ffffff;
+}
+
+.stat-label {
+    font-size: clamp(.4em, 2vw, .9em);
+    font-weight: 400;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+/* how it work Section*/
+
+.how-it-works {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.btn-book {
+    position: relative;
+    align-items: center;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px 30px;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+.booking {
+    position: absolute;
+    align-items: center;
+    display: none;
+    flex-direction: column;
+    background-color: #fefefe;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.close-btn-book {
+    margin-left: auto;
+    display: block;
+    background: black;
+    border-radius: 4px;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+
+}
+
+.booking-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.booking-form input {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: #0b0b0b 1px solid;
+    border-radius: 4px;
+    font-size: .9em;
+    box-sizing: border-box;
+}
+
+.booking-form input:nth-child(odd),
+.booking-form input:nth-child(even) {
+    width: 48%;
+}
+
+.booking-form button {
+    background-color: #0b0b0b;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: auto;
+    transition: background-color 0.3s;
+}
+
+.booking-form button:hover {
+    background-color: white;
+    color: #0b0b0b;
+}
+
+@media (max-width: 900px) {
+    .service-section {
+        padding: 50px 0px 30px;
         background: url('./assets/Serive-bg-1.jpg') no-repeat center center / cover;
     }
+
+    .how-section {
+        padding: 50px 0px 30px;
+        background: url('./assets/Serive-bg-1.jpg') no-repeat center center / cover;
+    }
+
+    .why-section {
+        padding: 50px 0px 30px;
+        background: url('./assets/Serive-bg-1.jpg') no-repeat center center / cover;
+    }
+    
+
     .service-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -202,19 +276,21 @@
     .features-grid {
         grid-template-columns: 1fr;
     }
-    .feature-card{
-        height: clamp(300px,350px,400px);
+
+    .feature-card {
+        height: clamp(300px, 350px, 400px);
     }
 
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
     .service-grid {
         grid-template-columns: 1fr;
     }
-   
+
 }
+
 @media (max-width: 600px) {
     .service-grid-inner {
         grid-template-columns: repeat(2, 1fr);

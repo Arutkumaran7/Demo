@@ -1,6 +1,7 @@
 .brands-section {
     background: url('./assets/brand-bg.jpg');
 }
+
 .brand-logos {
     display: flex;
     flex-direction: row;
@@ -16,7 +17,7 @@
 .contact-section {
     position: relative;
     padding: 75px 0 10px 0;
-    background: rgba(34, 34, 34, 0.707) ;
+    background: rgba(34, 34, 34, 0.707);
     height: clamp(100%, 100vh, 800px);
     text-align: center;
 }
@@ -30,7 +31,7 @@
     background-color: rgba(70, 70, 70, 0.9);
     padding: 30px;
     border-radius: 8px;
-    text-align: left;
+    text-align: center;
     margin-bottom: 40px;
 }
 
@@ -81,7 +82,8 @@
     font-size: .9em;
     box-sizing: border-box;
 }
-.contact-form textarea{
+
+.contact-form textarea {
     font-size: 1.1em;
 }
 
@@ -96,7 +98,7 @@
 }
 
 .contact-form button {
-    background-color: #007bff;
+    background-color: #0b0b0b;
     color: white;
     padding: 10px 30px;
     border: none;
@@ -106,9 +108,20 @@
     margin-left: auto;
     transition: background-color 0.3s;
 }
+
+.contact-form button:hover {
+    background-color: white;
+    color: #0b0b0b;
+}
+
 @media (max-width: 600px) {
+
     .contact-form input:nth-child(odd),
     .contact-form input:nth-child(even) {
         width: 100%;
+    }
+
+    .timing p {
+        font-size: 0.8em;
     }
 }
