@@ -1,9 +1,10 @@
 .footer-section {
     position: relative;
     padding: 50px 0 10px 0;
-    background: black ; 
+    background: black;
     text-align: center;
 }
+
 .social-icons a {
     color: rgb(202, 202, 202);
     font-size: 1.5em;
@@ -21,9 +22,10 @@
     font-size: 0.8em;
     color: #bbb;
 }
+
 .up {
     position: absolute;
-    right: 0px;
+    right: 5px;
     bottom: 0px;
     background-color: rgba(255, 255, 255, 0);
     border: none;
@@ -35,6 +37,7 @@
     .service-grid-inner {
         grid-template-columns: repeat(3, 1fr);
     }
+
     .contact-timing {
         flex-direction: column;
         gap: 15px;

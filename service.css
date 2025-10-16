@@ -75,7 +75,8 @@
 .why-choose-us {
     padding: 10px 0 50px;
 }
-.why-choose-us h2{
+
+.why-choose-us h2 {
     color: #000;
 }
 
@@ -87,11 +88,11 @@
 }
 
 .feature-card {
-    background-color: #adadad;
+    background-color: #000000;
     padding: 20px;
     border-radius: 8px;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.737);
 }
 
 .card-image-container {
@@ -126,7 +127,7 @@
 
 .feature-card:hover {
     margin: 5px;
-    background-color: rgba(39, 39, 39, 0.882);
+    background-color: rgb(31, 30, 30);
     border-radius: clamp(2px, 5vw, 10px);
     transform: scale(1.1);
     transition: all 0.3s ease-in-out;
@@ -134,6 +135,7 @@
     cursor: pointer;
     font-weight: bolder;
 }
+
 .stats-section {
     display: flex;
     justify-content: space-around;
@@ -250,6 +252,34 @@
     transition: background-color 0.3s;
 }
 
+input[type="datetime-local"] {
+    position: relative;
+    font-family: 'Quantico', sans-serif;
+}
+
+input[type="datetime-local"]:invalid {
+    color: transparent;
+}
+
+input[type="datetime-local"]:focus {
+    color: #333;
+}
+
+input[type="datetime-local"]::before {
+    content: attr(data-placeholder);
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    pointer-events: none;
+}
+
+input[type="datetime-local"]:focus::before,
+input[type="datetime-local"]:valid::before {
+    display: none;
+}
+
 
 
 @media (max-width: 900px) {
@@ -264,7 +294,7 @@
     .why-section {
         padding: 50px 0px 30px;
     }
-    
+
 
     .service-grid {
         grid-template-columns: repeat(2, 1fr);
